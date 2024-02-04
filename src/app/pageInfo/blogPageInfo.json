@@ -1,0 +1,11 @@
+{
+  "imgSrc": "https://firebasestorage.googleapis.com/v0/b/agency-b6787.appspot.com/o/blogs-page.png?alt=media&token=21b81c5d-cbeb-4ca3-97d0-aec4e2872889",
+  "overlay": {
+    "colorOne": "#5b5039",
+    "colorTwo": "#000000",
+    "imgPos": "top center",
+    "opacity": 0.61
+  },
+  "sectionHeader": "Learn more about us and the industry",
+  "title": "Blogs"
+}

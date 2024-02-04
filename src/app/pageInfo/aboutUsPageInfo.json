@@ -1,0 +1,32 @@
+{
+  "about-us": {
+    "body": "Elite Virtual Assistant is the cold calling service you need to expand your business. Each of our specialists has undergone rigorous training and mentoring from cold calling masters with over 6 years of experience, making us the best in connecting you with qualified leads who needs your offer the most.\n",
+    "header": "Elite Virtual Assistant",
+    "imgSrc": "https://dialpros.com/wp-content/uploads/2022/12/confident-call-center-operator-talking-with-client-1024x683.jpg",
+    "overlay": {
+      "imgPos": "center center"
+    },
+    "subtitle": "WHO WE ARE"
+  },
+  "blogs": {
+    "header": "NEWS UPDATE",
+    "selectedBlogs": [
+      "-NpFd4TA_erA-79sGyP6",
+      "-NpFdSHDwijpKExirn8h",
+      "-NpFdlHNGbajUMUChqmh"
+    ]
+  },
+  "hero": {
+    "imgSrc": "https://dialpros.com/wp-content/uploads/2022/12/pexels-cottonbro-studio-3205567-1.jpg",
+    "info": {
+      "header": "About Us"
+    },
+    "overlay": {
+      "colorOne": "#000000",
+      "colorTwo": "#5b5039",
+      "imagePos": "bottom center",
+      "imgPos": "bottom center",
+      "opacity": 0.61
+    }
+  }
+}

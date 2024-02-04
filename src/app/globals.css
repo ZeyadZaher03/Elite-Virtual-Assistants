@@ -1,0 +1,51 @@
+:root {
+  --coyote: #7c663dff;
+  --black: #000000ff;
+  --satin-sheen-gold: #be9636ff;
+  --bistre: #251804ff;
+  --black-2: #000003ff;
+  --black-3: #111111;
+
+  --primary-color-dark-2: #031426;
+  --primary-color-dark-1: #041e39;
+  --primary-color-light-1: #be9636ff;
+  --primary-color-light-2: #b19553;
+  --primary-color-light-4: #114378;
+  --button-background-color: rgb(197, 163, 83);
+  --white: #fff;
+  --black: #000;
+  --dark-grey-2: #7e7e7e;
+  --dark-grey-1: #565656;
+  --dark-grey-3: #54595f;
+  --dark-grey-4: #1e1e1e;
+
+  /*  */
+  --global-width: 65%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-montserrat);
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+  letter-spacing: 1.5008px;
+}
+
+span,
+p,
+a,
+input,
+textarea,
+button,
+li {
+  letter-spacing: 0.0625rem;
+}

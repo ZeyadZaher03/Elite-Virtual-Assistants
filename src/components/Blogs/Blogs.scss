@@ -1,0 +1,9 @@
+.blogs-component-container {
+  display: grid;
+  grid-gap: 1rem;
+  @media only screen and (max-width: 600px) {
+    & {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}

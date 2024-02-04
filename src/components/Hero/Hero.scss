@@ -1,0 +1,32 @@
+.home-hero-wrapper {
+  background-size: cover;
+  background-color: var(--black);
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    & {
+      height: 180vh;
+    }
+  }
+
+  .home-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    margin-top: 4rem;
+    width: var(--global-width);
+    position: relative;
+    @media only screen and (max-width: 600px) {
+      & {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin-top: 0;
+      }
+    }
+  }
+}

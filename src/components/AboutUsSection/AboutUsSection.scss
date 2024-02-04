@@ -1,0 +1,66 @@
+.home-about-us-section-container {
+  display: grid;
+  grid-template-columns: 1.56fr 3fr;
+
+  @media only screen and (max-width: 600px) {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .home-about-us-section-image {
+    width: 100%;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width: 600px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  .home-about-us-section-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-about-us-section-info {
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media only screen and (max-width: 600px) {
+      & {
+        padding: 2rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .home-about-us-section-header {
+    color: var(--primary-color-light-1);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+  }
+
+  .home-about-us-section-subtitle {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.8125rem;
+    letter-spacing: 0;
+    @media only screen and (max-width: 600px) {
+      & {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
+  }
+}

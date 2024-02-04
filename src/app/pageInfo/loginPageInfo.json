@@ -1,0 +1,10 @@
+{
+  "imgSrc": "https://firebasestorage.googleapis.com/v0/b/agency-b6787.appspot.com/o/login-page.jpg?alt=media&token=b0e56b3f-3bfe-481b-a87e-669e84bd3b63",
+  "overlay": {
+    "colorOne": "#000000",
+    "colorTwo": "#715b32",
+    "imgPos": "center center",
+    "opacity": 0.71
+  },
+  "title": "JOIN US"
+}

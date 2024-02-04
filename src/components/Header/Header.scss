@@ -1,0 +1,15 @@
+.header-section {
+  background-color: var(--black);
+  background-size: cover;
+  padding: 9rem 0 9rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -2;
+  .header-section__title {
+    font-size: 3.75rem;
+    color: var(--white);
+    margin-top: 1.5rem;
+  }
+}

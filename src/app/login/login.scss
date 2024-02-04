@@ -1,0 +1,48 @@
+.login__page__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 0;
+
+  .login__page__container {
+    width: var(--global-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 600px) {
+      & {
+        width: 90%;
+      }
+    }
+
+    .login__page__header {
+      font-size: 3rem;
+      line-height: 1.2;
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 0.025rem;
+      margin-bottom: 1rem;
+      text-align: center;
+
+      @media only screen and (max-width: 600px) {
+        & {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .login__page__inputWrapper {
+    width: 60%;
+
+    @media only screen and (max-width: 600px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.schedule-box {
+  background-color: var(--black-3);
+  border-radius: 0.3125rem;
+  padding: 1.875rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .box-header {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  .box-form-wrapper {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: var(--white);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "imgSrc": "https://dialpros.com/wp-content/uploads/2022/12/businessman-using-digital-tablet-scaled.jpg",
+  "overlay": {
+    "colorOne": "#5b5039",
+    "colorTwo": "#000000",
+    "imgPos": "center center",
+    "opacity": 0.61
+  },
+  "subtitle": "What we can do for you",
+  "title": "Our Services"
+}

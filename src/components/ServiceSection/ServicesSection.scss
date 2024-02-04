@@ -1,0 +1,20 @@
+.service-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+
+  .service-section-container {
+    width: var(--global-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 600px) {
+      & {
+        width: 90%;
+      }
+    }
+  }
+}

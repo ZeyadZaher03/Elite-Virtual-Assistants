@@ -1,0 +1,76 @@
+{
+  "aboutUs": {
+    "imgPos": {
+      "imgPos": "bottom center"
+    },
+    "imgSrc": "https://firebasestorage.googleapis.com/v0/b/agency-b6787.appspot.com/o/about-us-hero-section.png?alt=media&token=cd5644ff-837e-4990-8b56-f14ea26522ee",
+    "overlay": {
+      "imgPos": "center center"
+    },
+    "subtitle": "We are focused on making your process a success",
+    "title": "ABOUT US"
+  },
+  "blogs": {
+    "buttonText": "SEE ALL BLOGS",
+    "header": "NEWS UPDATE",
+    "selectedBlogs": [
+      "-NpFdlHNGbajUMUChqmh",
+      "-NpFdSHDwijpKExirn8h",
+      "-NpFd4TA_erA-79sGyP6"
+    ],
+    "subtitle": "Latest From Our Blog"
+  },
+  "faq": {
+    "buttonText": "Get More Leads With Us",
+    "header": "Frequently Asked Questions",
+    "selectedFaqs": [
+      "-NpFfsDgTGrN73EyPcaY",
+      "-NpFfkeK_97lyiKCnaiZ",
+      "-NpFfiGwStIXZBvU-fAb",
+      "-NpFfmhS2RiuXae4A3sd",
+      "-NpFfu8E1vp31yk3UKEh",
+      "-NpFfw74vlC_ZRpbHFny",
+      "-NpFg0uYc4x4EjnZVz6u",
+      "-NpFfynSp0JujRi_6G1_"
+    ]
+  },
+  "hero": {
+    "imgSrc": "https://firebasestorage.googleapis.com/v0/b/agency-b6787.appspot.com/o/hero-home-1.jpg?alt=media&token=58100f0f-b00c-40f2-9673-847693bf28ed",
+    "info": {
+      "body": "Amplify your lead generation success with our team of highly trained cold calling specialists equipped with accurate data and time-tested persuasive scripts, so you can crush your sales goals.",
+      "header": "Cold Calling Experts",
+      "subtitle": "For Real Estate Investors & Business Owners"
+    },
+    "overlay": {
+      "colorOne": "#1b1405",
+      "colorTwo": "#887044",
+      "imagePos": "top center",
+      "imgPos": "top center",
+      "opacity": 0.39
+    }
+  },
+  "info": {
+    "infoOneBody": "Plugged in and ready to connect with new customers every day, our sales experts are skilled in generating conversations that resonate with your prospect’s pain points—turning them into warm leads.",
+    "infoOneTitle": "We’ll do the ice-breaking for you",
+    "infoThreeBody": "…so you can close deals faster!",
+    "infoThreeTitle": "Finding & priming prospects",
+    "infoTwoBody": "Ignite and elevate the potential of your business with our established and proven processes that are highly customizable to fit the unique needs of your business.",
+    "infoTwoTitle": "Done-for-you sales process and persuasive scripts"
+  },
+  "partnerUp": {
+    "benefitsOne": "Cold callers trained under the hands of real estate investors with over 6 years of experience in the field",
+    "benefitsThree": "Battle-tested persuasive scripts that turn no’s into an overwhelming YES!",
+    "benefitsTwo": "Done-for-you prospect hunting and lead-warming, so you can focus on closing deals",
+    "title": "Partner up with Elite Virtual Assistant and you’ll get…"
+  },
+  "services": {
+    "buttonText": "View our service",
+    "header": "OUR BEST SERVICES",
+    "selectedServices": [
+      "-NpFeufGP6m86czLB2J0",
+      "-NpFfZx5VysCH6s53ssI",
+      "-NpFfba6aqKxQGLsqIKc"
+    ],
+    "subtitle": "What We Offer"
+  }
+}

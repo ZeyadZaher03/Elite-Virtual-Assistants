@@ -1,0 +1,15 @@
+.footer-item-container {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+
+  .footer-item__header {
+    color: var(--primary-color-light-1);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-item__value {
+    color: var(--white);
+    font-weight: bold;
+  }
+}
