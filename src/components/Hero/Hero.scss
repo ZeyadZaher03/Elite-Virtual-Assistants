@@ -1,3 +1,5 @@
+@import "mixin.scss";
+
 .home-hero-wrapper {
   background-size: cover;
   background-color: var(--black);
@@ -20,6 +22,15 @@
     grid-gap: 4rem;
     margin-top: 4rem;
     width: var(--global-width);
+
+    @include md(xl) {
+      width: var(--global-width--tablet-x);
+    }
+
+    @include md(lg) {
+      width: var(--global-width--mobile-s);
+    }
+
     position: relative;
     @media only screen and (max-width: 600px) {
       & {
