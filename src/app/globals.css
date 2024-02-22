@@ -21,6 +21,14 @@
 
   /*  */
   --global-width: 65%;
+  --global-width--tablet-x: 75%;
+  --global-width--tablet-m: 85%;
+  --global-width--mobile-s: 90%;
+
+  --mobile-max-width: 480px;
+  --tablet-max-width: 768px;
+  --laptop-max-width: 1024px;
+  --desktop-max-width: 1200px;
 }
 
 * {
