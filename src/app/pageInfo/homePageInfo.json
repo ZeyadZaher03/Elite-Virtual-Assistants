@@ -42,11 +42,11 @@
       "subtitle": "For Real Estate Investors & Business Owners"
     },
     "overlay": {
-      "colorOne": "#1b1405",
-      "colorTwo": "#887044",
+      "colorOne": "#000",
+      "colorTwo": "#6b5938",
       "imagePos": "top center",
       "imgPos": "top center",
-      "opacity": 0.39
+      "opacity": 0.55
     }
   },
   "info": {
