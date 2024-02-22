@@ -6,6 +6,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: ["./src/sass"],
   },
+  images: {
+    domains: ["firebasestorage.googleapis.com"],
+  },
 };
 
 module.exports = nextConfig;
