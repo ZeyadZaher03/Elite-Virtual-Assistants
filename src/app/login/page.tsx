@@ -8,6 +8,9 @@ import loginPageInfo from "../pageInfo/loginPageInfo.json";
 
 import "./login.scss";
 import { LoginForm } from "./loginForm/LoginForm";
+import { cache } from "react";
+import { getData } from "@/firebase";
+import { OverlayProps } from "@/components/Header/Header";
 
 export const metadata: Metadata = {
   title: "Elite VA | Login",
@@ -16,10 +19,28 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
 };
 
-export default function LoginPage() {
-  const title = loginPageInfo?.title;
-  const imgSrc = loginPageInfo?.imgSrc;
-  const overlay = loginPageInfo?.overlay;
+interface ILoginData {
+  title: string;
+  overlay: OverlayProps;
+  imgSrc: string;
+}
+
+export const revalidate = 1000 * 60 * 60 * 24; // revalidate the data at most every day
+
+export const getLoginData = cache(async () => {
+  const loginData = await getData<ILoginData>(
+    "pages/login",
+    () => {},
+    () => {}
+  );
+
+  return loginData;
+});
+export default async function LoginPage() {
+  const loginData = await getLoginData();
+  const title = loginData?.title;
+  const imgSrc = loginData?.imgSrc;
+  const overlay = loginData?.overlay;
 
   const customStyles = {
     backgroundImage: `url(${imgSrc})`,
@@ -32,9 +53,9 @@ export default function LoginPage() {
       <Nav currentPathName="/login" />
       <main style={customStyles} className="login__page__wrapper">
         <Overlay
-          opacity={overlay?.opacity}
-          colorOne={overlay?.colorOne}
-          colorTwo={overlay?.colorTwo}
+          opacity={overlay?.opacity || 0}
+          colorOne={overlay?.colorOne || ""}
+          colorTwo={overlay?.colorTwo || ""}
         />
         <div className="login__page__container">
           <h1 className="login__page__header">{title}</h1>
