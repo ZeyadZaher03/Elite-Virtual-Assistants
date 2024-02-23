@@ -4,6 +4,7 @@ import { Input, InputTypes } from "@/UI/Input";
 import React, { useState } from "react";
 import { loginWithEmailAndPassword } from "@/firebase/login";
 import styled from "styled-components";
+import { toast } from "react-toastify";
 
 const Button = styled.button`
   width: 100%;
@@ -20,9 +21,20 @@ const Button = styled.button`
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const onSubmit = () => {
+    loginWithEmailAndPassword({
+      email,
+      password,
+      onSuccess: () => {
+        toast.success("logged in successfully");
+      },
+      onError: (error) => {
+        toast.success("something went wrong");
+      },
+    });
+  };
   return (
-    <form className="login__page__inputWrapper">
+    <form onSubmit={onSubmit} className="login__page__inputWrapper">
       <Input
         name="email"
         type={InputTypes.TEXT}
@@ -39,22 +51,7 @@ export const LoginForm = () => {
         onChange={(e: any) => setPassword(e?.target?.value)}
         required
       />
-      <Button
-        onClick={() => {
-          loginWithEmailAndPassword({
-            email,
-            password,
-            onSuccess: () => {
-              console.log("onSuccess");
-            },
-            onError: () => {
-              console.log("onError");
-            },
-          });
-        }}
-      >
-        Submit
-      </Button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 };
