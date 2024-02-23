@@ -1,5 +1,18 @@
 import { User, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../lib/firebase-config";
+import { auth } from "root/lib/firebase-config";
+
+export const postLogin = async ({ token }: { token: string }) => {
+  try {
+    fetch("/api/auth", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 export const loginWithEmailAndPassword = async ({
   email,
@@ -18,6 +31,8 @@ export const loginWithEmailAndPassword = async ({
       email,
       password
     );
+    const token = await userCredential.user.getIdToken();
+    await postLogin({ token });
     onSuccess(userCredential.user);
   } catch (error) {
     onError(error);

@@ -21,7 +21,8 @@ const Button = styled.button`
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const onSubmit = () => {
+  const onSubmit = (e: any) => {
+    e.preventDefault();
     loginWithEmailAndPassword({
       email,
       password,
@@ -29,7 +30,7 @@ export const LoginForm = () => {
         toast.success("logged in successfully");
       },
       onError: (error) => {
-        toast.success("something went wrong");
+        toast.success("something went wrong!, try again later");
       },
     });
   };

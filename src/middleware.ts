@@ -21,7 +21,6 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-//Add your protected routes
 export const config = {
   matcher: ["/admin/:path*"],
 };

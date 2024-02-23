@@ -1,9 +1,5 @@
-import { auth, checkAuthState } from "@/firebase/login";
-
-import "./../globals.css";
+import "@/global.css";
 import { Montserrat } from "next/font/google";
-import { notFound } from "next/navigation";
-import { onAuthStateChanged } from "firebase/auth";
 
 const montserrat_init = Montserrat({
   subsets: ["latin"],
@@ -16,10 +12,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  if (true) {
-    notFound();
-  }
-
   return (
     <html lang="en">
       <body className={montserrat_init.variable}>{children}</body>
