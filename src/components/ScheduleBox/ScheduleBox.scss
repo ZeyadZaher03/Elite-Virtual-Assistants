@@ -1,7 +1,12 @@
+@import "mixin.scss";
+
 .schedule-box {
   background-color: var(--black-3);
   border-radius: 0.3125rem;
   padding: 1.875rem;
+  @include md(xl) {
+    margin-bottom: 1rem;
+  }
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -9,8 +14,20 @@
   .box-header {
     font-size: 2.25rem;
     margin-bottom: 1rem;
+    text-align: center;
+
+    @include md(xl) {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @include md(lg) {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
     color: var(--white);
   }
+
   .box-form-wrapper {
     width: 100%;
     padding: 0.8rem 1rem;
@@ -19,5 +36,9 @@
     font-size: 1rem;
     color: var(--white);
     cursor: pointer;
+
+    @include md(xl) {
+      padding: 0;
+    }
   }
 }
