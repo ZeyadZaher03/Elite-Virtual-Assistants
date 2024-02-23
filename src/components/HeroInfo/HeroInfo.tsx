@@ -26,7 +26,6 @@ export const HeroInfo = ({
           </li>
         ))}
       </ul>
-      <h2 className="hero-info-section-header">Reviews & Ratings</h2>
     </div>
   );
 };

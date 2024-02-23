@@ -35,6 +35,7 @@ export const MobileNavigation = ({
         <ul className="nav-hamburger__list">
           {links.map(({ title, href }) => (
             <MobileNavigationLink
+              key={title}
               currentPathName={currentPathName}
               href={href}
               title={title}

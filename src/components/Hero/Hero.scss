@@ -1,3 +1,5 @@
+@import "mixin.scss";
+
 .home-hero-wrapper {
   background-size: cover;
   background-color: var(--black);
@@ -8,10 +10,8 @@
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 600px) {
-    & {
-      height: 180vh;
-    }
+  @include md(md) {
+    height: 180vh;
   }
 
   .home-hero-container {
@@ -20,13 +20,20 @@
     grid-gap: 4rem;
     margin-top: 4rem;
     width: var(--global-width);
+
+    @include md(xl) {
+      width: var(--global-width--tablet-x);
+    }
+
+    @include md(lg) {
+      width: var(--global-width--mobile-s);
+    }
+
     position: relative;
-    @media only screen and (max-width: 600px) {
-      & {
-        grid-template-columns: 1fr;
-        width: 90%;
-        margin-top: 0;
-      }
+    @include md(md) {
+      grid-template-columns: 1fr;
+      width: 90%;
+      margin-top: 0;
     }
   }
 }
