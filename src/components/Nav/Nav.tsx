@@ -1,12 +1,11 @@
-import React from "react";
-
 import { NavigationLink } from "./NavigationLink";
 import { MobileNavigation } from "./MobileNavigation/MobileNav";
 import { Logo } from "./Logo";
+import getUser from "@/lib/getUser";
 
 import "./Nav.scss";
 
-const links = [
+const linksWithoutAdmin = [
   { title: "Home", href: "/" },
   { title: "About us ", href: "/about-us" },
   { title: "Services", href: "/services" },
@@ -15,7 +14,24 @@ const links = [
   { title: "Login", href: "/login" },
 ];
 
-export const Nav = ({ currentPathName }: { currentPathName: string }) => {
+const linksWithAdmin = [
+  { title: "Home", href: "/" },
+  { title: "About us ", href: "/about-us" },
+  { title: "Services", href: "/services" },
+  { title: "Blog", href: "/blogs" },
+  { title: "Schedule a call", href: "/sales-meetings" },
+  { title: "Admin", href: "/admin" },
+];
+
+export const Nav = async ({ currentPathName }: { currentPathName: string }) => {
+  const user = await getUser();
+  let links = null;
+  console.log(user);
+  if (user) {
+    links = linksWithAdmin;
+  } else {
+    links = linksWithoutAdmin;
+  }
   return (
     <nav className="navigation">
       <div className="navigation__wrapper">
