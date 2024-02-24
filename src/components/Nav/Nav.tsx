@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import getUser from "@/lib/getUser";
 
 import "./Nav.scss";
+import { logOut } from "@/lib/logout";
 
 const linksWithoutAdmin = [
   { title: "Home", href: "/" },
@@ -26,7 +27,7 @@ const linksWithAdmin = [
 export const Nav = async ({ currentPathName }: { currentPathName: string }) => {
   const user = await getUser();
   let links = null;
-  console.log(user);
+
   if (user) {
     links = linksWithAdmin;
   } else {
@@ -45,6 +46,13 @@ export const Nav = async ({ currentPathName }: { currentPathName: string }) => {
               currentPathName={currentPathName}
             />
           ))}
+          {user && (
+            <form action={logOut}>
+              <button type="submit" className={"navigation_link"}>
+                Logout
+              </button>
+            </form>
+          )}
         </div>
         <MobileNavigation links={links} currentPathName={currentPathName} />
       </div>

@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { loginWithEmailAndPassword } from "@/firebase/login";
 import styled from "styled-components";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const Button = styled.button`
   width: 100%;
@@ -21,12 +22,15 @@ const Button = styled.button`
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
+
   const onSubmit = (e: any) => {
     e.preventDefault();
     loginWithEmailAndPassword({
       email,
       password,
       onSuccess: () => {
+        router.push("/admin");
         toast.success("logged in successfully");
       },
       onError: (error) => {

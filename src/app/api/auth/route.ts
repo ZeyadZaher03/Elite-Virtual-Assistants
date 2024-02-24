@@ -46,3 +46,19 @@ export async function POST(request: NextRequest, response: NextResponse) {
 
   return NextResponse.json({}, { status: 200 });
 }
+
+export async function DELETE(request: NextRequest, response: NextResponse) {
+  const token = cookies().get("session")?.value || "";
+  if (!token) {
+    return NextResponse.json({ isLogged: false }, { status: 401 });
+  }
+  await invalidateLogin(token);
+  return NextResponse.json({}, { status: 200 });
+}
+
+export const invalidateLogin = async (token: string) => {
+  const decodedClaims = await auth().verifySessionCookie(token, true);
+  await auth().revokeRefreshTokens(decodedClaims.uid);
+  cookies().delete("session");
+  return;
+};
