@@ -36,3 +36,7 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 .next
+
+src/service-account.json
+.env
+.env.local

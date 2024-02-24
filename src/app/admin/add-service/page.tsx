@@ -194,12 +194,7 @@ const AddService: React.FC = () => {
   const addService = useCallback(
     (data: ServiceData) => {
       const { title, subtitle, description, imgSrc, type, sections } = data;
-      console.log("title", title);
-      console.log("subTitle", subtitle);
-      console.log("description", description);
-      console.log("imgSrc", imgSrc);
-      console.log("type", type);
-      console.log("sections", sections);
+
       const notFilled =
         title || subtitle || description || imgSrc || type || sections;
       if (!notFilled) {

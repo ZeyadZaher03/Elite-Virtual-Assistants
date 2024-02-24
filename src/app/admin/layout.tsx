@@ -1,10 +1,6 @@
-"use client";
-
-import { useUser } from "@/firebase/login";
-import NotFound from "../not-found";
-
-import "./../globals.css";
+import "@/app/globals.css";
 import { Montserrat } from "next/font/google";
+import "react-toastify/dist/ReactToastify.css";
 
 const montserrat_init = Montserrat({
   subsets: ["latin"],
@@ -12,22 +8,11 @@ const montserrat_init = Montserrat({
   variable: "--font-montserrat",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const user = useUser();
-  if (!user) {
-    return (
-      <html lang="en">
-        <body className={montserrat_init.variable}>
-          <NotFound />
-        </body>
-      </html>
-    );
-  }
-
   return (
     <html lang="en">
       <body className={montserrat_init.variable}>{children}</body>

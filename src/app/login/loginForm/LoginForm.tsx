@@ -4,6 +4,8 @@ import { Input, InputTypes } from "@/UI/Input";
 import React, { useState } from "react";
 import { loginWithEmailAndPassword } from "@/firebase/login";
 import styled from "styled-components";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const Button = styled.button`
   width: 100%;
@@ -15,14 +17,36 @@ const Button = styled.button`
   color: var(--black);
   font-weight: 700;
   background-color: var(--button-background-color);
+  transition: all 0.2s ease-in-out;
 `;
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
+
+  const onSubmit = (e: any) => {
+    setLoading(true);
+    e.preventDefault();
+    loginWithEmailAndPassword({
+      email,
+      password,
+      onSuccess: () => {
+        setLoading(false);
+        router.push("/admin");
+        toast.success("logged in successfully");
+      },
+      onError: (error) => {
+        setLoading(false);
+        toast.success("something went wrong!, try again later");
+      },
+    });
+  };
 
   return (
-    <form className="login__page__inputWrapper">
+    <form onSubmit={onSubmit} className="login__page__inputWrapper">
       <Input
         name="email"
         type={InputTypes.TEXT}
@@ -40,18 +64,9 @@ export const LoginForm = () => {
         required
       />
       <Button
-        onClick={() => {
-          loginWithEmailAndPassword({
-            email,
-            password,
-            onSuccess: () => {
-              console.log("onSuccess");
-            },
-            onError: () => {
-              console.log("onError");
-            },
-          });
-        }}
+        disabled={loading}
+        className={loading ? "loading" : ""}
+        type="submit"
       >
         Submit
       </Button>
