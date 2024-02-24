@@ -1,3 +1,5 @@
+@import "mixin.scss";
+
 .login__page__wrapper {
   position: relative;
   display: flex;
@@ -7,16 +9,15 @@
   z-index: 0;
 
   .login__page__container {
-    width: var(--global-width);
+    @include global-width();
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    @media only screen and (max-width: 600px) {
-      & {
-        width: 90%;
-      }
+    @include md(md) {
+      width: 90%;
     }
 
     .login__page__header {
@@ -39,10 +40,17 @@
   .login__page__inputWrapper {
     width: 60%;
 
-    @media only screen and (max-width: 600px) {
-      & {
-        width: 100%;
-      }
+    @include md(lg) {
+      width: 80%;
+    }
+
+    @include md(md) {
+      width: 100%;
+    }
+
+    .loading {
+      background-color: #a18950;
+      cursor: not-allowed;
     }
   }
 }

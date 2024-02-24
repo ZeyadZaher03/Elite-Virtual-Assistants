@@ -16,3 +16,15 @@ $media: (
     }
   }
 }
+
+@mixin global-width() {
+  width: var(--global-width);
+
+  @include md(xl) {
+    width: var(--global-width--tablet-x);
+  }
+
+  @include md(lg) {
+    width: var(--global-width--mobile-s);
+  }
+}

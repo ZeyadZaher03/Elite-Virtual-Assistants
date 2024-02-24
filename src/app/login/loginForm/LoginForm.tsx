@@ -17,27 +17,34 @@ const Button = styled.button`
   color: var(--black);
   font-weight: 700;
   background-color: var(--button-background-color);
+  transition: all 0.2s ease-in-out;
 `;
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const router = useRouter();
 
   const onSubmit = (e: any) => {
+    setLoading(true);
     e.preventDefault();
     loginWithEmailAndPassword({
       email,
       password,
       onSuccess: () => {
+        setLoading(false);
         router.push("/admin");
         toast.success("logged in successfully");
       },
       onError: (error) => {
+        setLoading(false);
         toast.success("something went wrong!, try again later");
       },
     });
   };
+
   return (
     <form onSubmit={onSubmit} className="login__page__inputWrapper">
       <Input
@@ -56,7 +63,13 @@ export const LoginForm = () => {
         onChange={(e: any) => setPassword(e?.target?.value)}
         required
       />
-      <Button type="submit">Submit</Button>
+      <Button
+        disabled={loading}
+        className={loading ? "loading" : ""}
+        type="submit"
+      >
+        Submit
+      </Button>
     </form>
   );
 };
